@@ -1,0 +1,85 @@
+title: Detect RMM Tool Usage via DNS Queries
+id: a0a9bd1b-d9ad-4a84-9fb3-fc043e049321
+status: experimental
+description: Detects known RMM tools execution via DNS queries to identify potential threat actor activities.
+Author: MahirAli Khan
+date: 2024-09-21
+tags:
+  - rmm
+  - dns
+  - threat-hunting
+
+logsource:
+  category: dns
+  product: windows
+
+detection:
+  selection:
+    dns.query:
+      - "*.action1.com" # Action1
+      - "*.aeroadmin.com" # AeroAdmin
+      - "*.ammyy.com" # Ammyy Admin
+      - "*.net.anydesk.com" # AnyDesk
+      - "*.atera.com" # Atera
+      - "*.bomgar.com" # Bomgar/BeyondTrust
+      - "remotedesktop.google.com" # Chrome Remote Desktop
+      - "*.domotz.com" # Domotz
+      - "*.domotz.co" # Domotz
+      - "*.dwservice.net" # DWAgent
+      - "dwservice.net" # DWAgent
+      - "fixme.it" # FixMe.IT
+      - "*.techinline.net" # FixMe.IT
+      - "*.fleetdeck.io" # Fleetdeck
+      - "*.getscreen.me" # GetScreen
+      - "*.gotoresolve.com" # GoTo (Logmein)
+      - "*.logmein.com" # GoTo (Logmein)
+      - "*.logmeinrescue.com" # GoTo (Logmein)
+      - "*.logmeininc.com" # GoTo (Logmein)
+      - "*.jumpcloud.com" # JumpCloud
+      - "*.level.io" # Level.io
+      - "*.twilio.com" # Level.io
+      - "*.realtime.ably.io" # Level.io
+      - "meshcentral.com" # MeshCentral
+      - "*.meshcentral.com" # MeshCentral
+      - "*.n-able.com" # N-Able/BeAnywhere
+      - "*.beanywhere.com" # N-Able/BeAnywhere
+      - "*.swi-rc.com" # N-Able/BeAnywhere
+      - "*.swi-tc.com" # N-Able/BeAnywhere
+      - "*.pubnub.com" # N-Able/BeAnywhere
+      - "*.netsupportsoftware.com" # NetSupport
+      - "*.netsupportmanager.com" # NetSupport
+      - "*.parsecgaming.com" # Parsec
+      - "*.parsec.app" # Parsec
+      - "*.pulseway.com" # Pulseway
+      - "remoteassistance.support.services.microsoft.com" # Quick Assist
+      - "*.tightvnc.com" # RealVNC
+      - "update.tightvnc.com" # RealVNC
+      - "*.remotepc.com" # RemotePC
+      - "*.remoteutilities.com" # RemoteUtilities
+      - "*.rustdesk.com" # RustDesk
+      - "*.screenconnect.com" # ScreenConnect
+      - "*.connectwisecontrol.com" # ScreenConnect
+      - "*.simple-help.com" # SimpleHelp
+      - "simple-help.io" # SimpleHelp
+      - "*.sorillus.com" # Sorillus
+      - "*.splashtop.com" # Splashtop
+      - "*.splashtop.eu" # Splashtop
+      - "*.supremocontrol.com" # Supremo
+      - "*.nanosystems.it" # Supremo
+      - "*.tacticalrmm.io" # TacticalRMM
+      - "*.tacticalrmm.com" # TacticalRMM
+      - "*.tailscale.com" # Tailscale
+      - "*.teamviewer.com" # TeamViewer
+      - "*.tmate.io" # Tmate
+      - "*.twingate.com" # Twingate
+      - "twingate.com" # Twingate
+      - "client.twingate.com" # Twingate
+      - "*.zoho.com" # ZohoAssist
+      - "*.zohocdn.com" # ZohoAssist
+      - "zohoassist.com" # ZohoAssist
+  condition: selection
+  level: high
+
+false_positive:
+  - Legitimate use of RMM tools for IT support and administration activities.
+  - Misconfigured systems querying these domains for legitimate purposes.
