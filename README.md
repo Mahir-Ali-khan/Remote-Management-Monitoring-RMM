@@ -32,7 +32,7 @@ The goal of this repository is to:
 
 ## List of Known RMM Tools
 
-| Sr. No | Tool Name                | Threat Group Usage                                                                                     | Common DNS Queries                                                            |
+| Sr. No | Tool Name                | Threat Actors                                                                                     | Common DNS Queries                                                            |
 |--------|--------------------------|-------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
 | 1      | Action1                  | LockBit                                                                                            | *.action1.com                                                                |
 | 2      | AeroAdmin                | Scattered Spider                                                                                  | *.aeroadmin.com                                                             |
