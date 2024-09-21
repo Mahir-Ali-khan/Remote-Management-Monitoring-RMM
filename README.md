@@ -12,7 +12,6 @@ Sigma rule available in this repository for creating hunt queries.
 - [Purpose of This Repository](#purpose-of-this-repository)
 - [False Positives](#false-positives)
 - [List of Known RMM Tools](#list-of-known-rmm-tools)
-- [Sigma Rule](Remote-Management-Monitoring-RMM/Detect_RMM_Tool_Usage_via_DNS_Queries.yml)
 - [Contributing](#contributing)
 - [License](#license)
 
