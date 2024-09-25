@@ -77,7 +77,7 @@ detection:
       - "client.twingate.com" # Twingate
       - "*join.zoho.com" # ZohoAssist
       - "downloads.zohocdn.com" # ZohoAssist
-      - "zohoassist.com"
+      - "zohoassist.com" # ZohoAssist
       - "assist.zoho.com" # ZohoAssist
   condition: selection
   level: high
