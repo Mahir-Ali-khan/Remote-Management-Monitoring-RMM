@@ -35,7 +35,8 @@ detection:
       - "*.logmein.com" # GoTo (Logmein)
       - "*.logmeinrescue.com" # GoTo (Logmein)
       - "*.logmeininc.com" # GoTo (Logmein)
-      - "*.jumpcloud.com" # JumpCloud
+      - "kisckstart.jumpcloud.com" # JumpCloud
+      - "agent.jumpcloud.com" # JumpCloud
       - "*.level.io" # Level.io
       - "*.twilio.com" # Level.io
       - "*.realtime.ably.io" # Level.io
@@ -74,9 +75,10 @@ detection:
       - "*.twingate.com" # Twingate
       - "twingate.com" # Twingate
       - "client.twingate.com" # Twingate
-      - "*.zoho.com" # ZohoAssist
-      - "*.zohocdn.com" # ZohoAssist
-      - "zohoassist.com" # ZohoAssist
+      - "*join.zoho.com" # ZohoAssist
+      - "downloads.zohocdn.com" # ZohoAssist
+      - "zohoassist.com"
+      - "assist.zoho.com" # ZohoAssist
   condition: selection
   level: high
 
